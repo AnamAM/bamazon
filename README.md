@@ -26,7 +26,7 @@ In order for this Bamazon Application to work, you must install the following de
 <img width="1017" alt="4quantity" src="https://user-images.githubusercontent.com/44790952/53545475-31e1ff00-3aef-11e9-872b-2c954a62fac8.png">
 
 
-**This displays the total cost of the amount of products that a user wants to purchase.
+**This displays the total cost of the amount of products that a user wants to purchase.**
 <img width="1014" alt="5quantitypicked" src="https://user-images.githubusercontent.com/44790952/53545477-33abc280-3aef-11e9-96d8-3219f12ed6bd.png">
 
 
