@@ -18,7 +18,7 @@ In order for this Bamazon Application to work, you must install the following de
 <img width="1015" alt="2chooseid" src="https://user-images.githubusercontent.com/44790952/53545465-2b538780-3aef-11e9-93be-29763f46e7d6.png">
 
 
-**This displays the information of the product that he or she chose.***
+**This displays the information of the product that he or she chose.**
 <img width="1015" alt="3pickedid" src="https://user-images.githubusercontent.com/44790952/53545468-2db5e180-3aef-11e9-9a1b-25c833d6b9ac.png">
 
 
