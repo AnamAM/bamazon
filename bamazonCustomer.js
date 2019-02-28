@@ -23,6 +23,10 @@ var stockQuantity;
 var newQuantity;
 var totalCost;
 var grandTotal = 0;
+var floatGrandTotal = 0;
+var alternative = ["I'll take the rest of the products.", "I'd like to purchase another product."]
+var leftOverProducts;
+var floatLOProducts = 0;
 
 
 function displayProducts() {
@@ -84,6 +88,7 @@ function productQuantity() {
                 // floatCost = parseFloat(totalCost).toFixed(2);
 
                 grandTotal += totalCost;
+                grandTotal += floatLOProducts + totalCost;
 
                 floatGrandTotal = parseFloat(grandTotal).toFixed(2);
                 
@@ -92,6 +97,28 @@ function productQuantity() {
             }
             else {
                 console.log("\nInsufficient quantity!\nUnfortunately, we only have " + stockQuantity + " of those products in stock.\n");
+                inquirer
+                .prompt({
+                    name: "anotherPick",
+                    type: "list",
+                    message: "We apologize for the inconvenience. What would you like to do now?",
+                    choices: alternative
+                })
+                .then(function(answer) {
+                    if (answer.anotherPick === alternative[0]) {
+                        leftOverProducts = stockQuantity * priceofProduct;
+                        floatLOProducts = parseFloat(leftOverProducts).toFixed(2);
+                        console.log("\nYour total is now $" + floatLOProducts + "!");
+                        newQuantity = (stockQuantity - stockQuantity);
+                        updateStock();
+
+                        // If a user chooses the first option of "I'll take the remaining products", then it will show the total price of the x amount of products that were left in stock and also give you a grand total of everything purchased thus far.
+                        
+                    }
+                    else {
+                        displayProducts();
+                    }
+                })
             }
         })
 }
